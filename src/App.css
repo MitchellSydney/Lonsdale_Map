@@ -1,1 +1,130 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
 
+/* Large text for TV viewing */
+h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Map container */
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.workplace-map {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workplace-map rect {
+  transition: all 0.3s ease;
+}
+
+.workplace-map rect:hover {
+  stroke-width: 4;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.legend-color {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+.legend-color.available {
+  background-color: #51cf66;
+}
+
+.legend-color.commissioned {
+  background-color: #ff6b6b;
+}
+
+/* Area status list */
+.area-status {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.area-status h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.status-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.3rem;
+}
+
+.status-item:last-child {
+  border-bottom: none;
+}
+
+.status-item .available {
+  color: #2b8a3e;
+  font-weight: bold;
+}
+
+.status-item .commissioned {
+  color: #e03131;
+  font-weight: bold;
+}
+
+/* Responsive for different screen sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  .workplace-map {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .legend {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
